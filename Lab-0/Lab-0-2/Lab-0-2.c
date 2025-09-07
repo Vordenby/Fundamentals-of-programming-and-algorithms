@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <locale.h>
+#include <stdlib.h>
 
 void main() {
-	setlocale(LC_CTYPE, "RUS");
+	setlocale(LC_CTYPE, "");
 
 	puts("***********************************************************************************");
 	puts("*                                                                                 *");
@@ -12,5 +13,5 @@ void main() {
 	puts("*                                                                                 *");
 	puts("***********************************************************************************");
 
-	return 0;
+	system("pause");
 }
