@@ -5,12 +5,12 @@
 
 int choosing_number() {
     int K;
-    printf("Какой дюйм вы выбираете?\n (1 - английский) \n (2 - Испанский) \n (3 - Старолитовский) ");
-    scanf("%d", K);
+    printf("Какой дюйм вы выбираете?\n (1 - английский) \n (2 - Испанский) \n (3 - Старолитовский) \n");
+    scanf("%d", &K);
     return K;
     }
 
-void main() {
+int main() {
     
     int dym, choose; // eng inch = 2,54cm
     float result;
@@ -20,27 +20,28 @@ void main() {
 
     choose = 0;
 
-    while (choose != 1 || choose != 2 || choose !=3) 
+    while (choose != 1 && choose != 2 && choose !=3) 
     {
         choose = choosing_number();
 
         if (choose == 1) 
         {
             result = Eng * dym;
+            break;
         }
         else if (choose == 2)
         {
             result = Spain * dym;
+            break;
         }
         else if (choose == 3)
         {
             result = StarLit * dym;
+            break;
         }
+
     };
-    
-    
-    
 
     printf("%d дюймов - это %.1f см\n", dym, result);
-
+    return 0;
 }
