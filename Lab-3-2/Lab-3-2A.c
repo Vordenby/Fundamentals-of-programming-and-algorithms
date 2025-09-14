@@ -40,13 +40,13 @@ int main()
 
         if (choosing_mile == 1) {result = Mor_mile*mile; k = ' ';}
         else if (choosing_mile == 2) {result = Suh_mile*mile; k = 'к';}
-        else if (choosing_mile == 3) {result = Rome_mile*mile; k =' ';}
-        else if (choosing_mile == 4) {result = OgR_mile*mile; k ="к";}
-        else if (choosing_mile == 5) {result = Geo_mile*mile; k ="к";}
+        else if (choosing_mile == 3) {result = Rome_mile*mile; k = ' ';}
+        else if (choosing_mile == 4) {result = OgR_mile*mile; k = 'к';}
+        else if (choosing_mile == 5) {result = Geo_mile*mile; k = 'к';}
 
     }
     
-    printf("Ответ: %.2f %cм \n", k);
+    printf("Ответ: %.2f %cм \n", result, k);
     return 0;
 
 }
