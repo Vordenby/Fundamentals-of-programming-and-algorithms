@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <locale.h>
 
 #define Mor_mile 1.852 // meters
 #define Suh_mile 1.609 // km
@@ -46,8 +45,6 @@ int main()
         else if (choosing_mile == 5) {result = Geo_mile*mile; k = 'k';}
 
     }
- 
-    setlocale(LC_CTYPE, "");
 
     printf("Ответ: %.2f %cm \n", result, k);
     return 0;
