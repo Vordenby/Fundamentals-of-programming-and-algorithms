@@ -15,4 +15,6 @@ int main() {
     float result = sinf(gr);
 
     printf("%f\n", result);
+
+    return 0;
 }
