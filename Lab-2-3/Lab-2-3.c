@@ -8,7 +8,7 @@ void main()
     n = 2;
     L = 335;
     
-    printf("\nДано:\n%.1f\n%.1f\n-------\nОтвет:\n%-+4.2f\n\n", n, L, n/L);
+    printf("\nДано:\n\t\t%.1f\n\t\t%.1f\n          ___________\nОтвет:\n\t\t%-+4.2f\n\n", n, L, n/L);
 
 
 }
