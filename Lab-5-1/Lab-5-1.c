@@ -12,7 +12,7 @@ int main() {
     scanf("%d", &grad);
     gr = (grad * M_PI)/180;
 
-    double result = sin(gr);
+    float result = sinf(gr);
 
-    printf("%e\n", result);
+    printf("%f\n", result);
 }
