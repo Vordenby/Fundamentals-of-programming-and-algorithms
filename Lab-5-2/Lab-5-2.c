@@ -4,14 +4,15 @@
 #define _USE_MATH_DEFINES
 
 int Y_creator(float b, float x) {
-    float res = exp(x) + pow(5.8, -b);
+    b = b * (-1);
+    float res = exp(x) + pow(5.8, b);
 
     return res;
 
 }
 
 int B_creator(float a, float c) {
-    float res = pow(a, 2)+ pow(c, 1./2);
+    float res = pow(a, 2)+ pow(c, 0.5);
 
     return res;
 
@@ -35,7 +36,7 @@ int main() {
     b = B_creator(a, c);
     y = Y_creator(b, x);
 
-    printf("|c) %f |b) %f |a) %f |y) %f |\n", c, b, a, y);
+    printf("c) %f\nb) %f\na) %f\ny) %f\n", c, b, a, y);
 
     return 0;
 }
