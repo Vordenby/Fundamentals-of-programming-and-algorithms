@@ -26,11 +26,10 @@ int main()
 
     FLength = Num_Of_Int(a) + 1 + Num_Of_Int(b);
 
-    
-
     printf("|");putchars('-', (FLength*3)+2);printf("|\n");
     printf("|%*s|%*s|%*s|\n", FLength, "a*b", FLength, "a+b", FLength, "a-b");
     printf("|");putchars('-', (FLength*3)+2);printf("|\n");
+    printf("|%*s %.0f*%.0f | %*s %.0f+%.0f | %*s %.0f-%.0f |", FLength, " ", a, b, FLength, " ", a, b, FLength, " ", a, b);
     printf("|%*.0f|%*.0f|%*.0f|\n", FLength, a*b, FLength, a+b, FLength, a-b);
     printf("|");putchars('-', (FLength*3)+2);printf("|\n");
    
