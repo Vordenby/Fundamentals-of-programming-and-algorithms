@@ -2,6 +2,7 @@
 #include <math.h>
 
 #define MATH_PI 3.141592653589793
+#define _USE_MATH_DEFINES
 
 float F(double x) {
 
