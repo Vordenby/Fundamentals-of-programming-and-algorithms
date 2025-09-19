@@ -3,8 +3,6 @@
 #include <stdlib.h>
 
 #define _USE_MATH_DEFINES
-
-
 void putchars(char c, int count){
     for (int i = 0; i < count; i++){putchar(c);}
 }
@@ -27,6 +25,8 @@ int main()
     scanf("%d", &b);
 
     FLength = Num_Of_Int(a) + 1 + Num_Of_Int(b);
+
+    
 
     printf("|");putchars('-', (FLength*3)+2);printf("|\n");
     printf("|%*s|%*s|%*s|\n", FLength, "a*b", FLength, "a+b", FLength, "a-b");
