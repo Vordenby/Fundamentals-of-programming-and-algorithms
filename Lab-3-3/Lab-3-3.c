@@ -1,7 +1,18 @@
 #include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+#define _USE_MATH_DEFINES
+
 
 void putchars(char c, int count){
     for (int i = 0; i < count; i++){putchar(c);}
+}
+
+int Num_Of_Int(int integer) {
+    float res = floorf(log10f(abs(integer))) + 1;
+    res = (int)res;
+    return res;
 }
 
 int main()
@@ -15,9 +26,7 @@ int main()
     printf("Введите b: ");
     scanf("%d", &b);
 
-    if (a/10 > 0 && b/10 > 0) {FLength = a/10 + b/10 + 1;}
-    else if ((a/10 > 0 && b/10 == 0)||(b/10 > 0 && a/10 == 0)) {FLength = a/10 + 2;}
-    else {FLength = 3;}
+    FLength = Num_Of_Int(a) + 1 + Num_Of_Int(b);
 
     printf("|");putchars('-', (FLength*3)+2);printf("|\n");
     printf("|%*s|%*s|%*s|\n", FLength, "a*b", FLength, "a+b", FLength, "a-b");
