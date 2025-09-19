@@ -20,11 +20,8 @@ int main()
 
 {
     bool A, B, C, D;
-    printf("Поэтапно вводите значения (0 - False, 1 - True) датчиков A B C D\n");
-    scanf("%d", &A);
-    scanf("%d", &B);
-    scanf("%d", &C);
-    scanf("%d", &D);
+    printf("Через пробел вводите значения (0 - False, 1 - True) датчиков A B C D: ");
+    scanf("%d %d %d %d", &A,&B,&C,&D);
 
     Check_Active(Is_Active(A, B, C, D));
 
