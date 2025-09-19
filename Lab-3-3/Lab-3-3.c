@@ -15,14 +15,14 @@ int Num_Of_Int(int integer) {
 
 int main()
 {
-    int a, b;
+    float a, b;
 
     int FLength;
     
     printf("Введите a: ");
-    scanf("%d", &a);
+    scanf("%f", &a);
     printf("Введите b: ");
-    scanf("%d", &b);
+    scanf("%f", &b);
 
     FLength = Num_Of_Int(a) + 1 + Num_Of_Int(b);
 
@@ -31,7 +31,7 @@ int main()
     printf("|");putchars('-', (FLength*3)+2);printf("|\n");
     printf("|%*s|%*s|%*s|\n", FLength, "a*b", FLength, "a+b", FLength, "a-b");
     printf("|");putchars('-', (FLength*3)+2);printf("|\n");
-    printf("|%*d|%*d|%*d|\n", FLength, a*b, FLength, a+b, FLength, a-b);
+    printf("|%*.0f|%*.0f|%*.0f|\n", FLength, a*b, FLength, a+b, FLength, a-b);
     printf("|");putchars('-', (FLength*3)+2);printf("|\n");
    
     return 0;
