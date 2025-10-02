@@ -1,6 +1,11 @@
 ﻿#include <stdio.h>
+#include <locale.h>
+
 
 int main() {
+
+	setlocale(LC_CTYPE, "RU");
+
 	printf("\n\t1\n\t\t2\n\t\t\t3\n"); // subtask 1-3
 	//------------------------------------------------------------------------
 	printf("%1d, %2d, %3d, %4d \n", 1,2,3,4); // subtask 4

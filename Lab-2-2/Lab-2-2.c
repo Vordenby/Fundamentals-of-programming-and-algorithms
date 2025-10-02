@@ -4,6 +4,8 @@
 
 void main() {
 
+    setlocale(LC_CTYPE, "RU");
+
     int N, K;
     
     N = 12;
