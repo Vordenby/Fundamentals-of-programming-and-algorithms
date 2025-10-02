@@ -1,21 +1,24 @@
 #include <stdio.h>
 #include <locale.h>
 
+
 int main() {
+
+    int cookies = 40;
+    int apples = 10;
+    int candy = 20;
 
     setlocale(LC_CTYPE, "RU");
 
-    int x, a, result;
+    int X, Y, Z, cost;
 
-    printf("Введите зарплату работника: ");
-    scanf("%d", &x);
+    printf("Введите кол-во конфет (в кг): ");scanf("%d", &X);
+    printf("Введите кол-во печенья (в кг): ");scanf("%d", &Y);
+    printf("Введите кол-во яблок (в кг): ");scanf("%d", &Z);
 
-    printf("\nВведите кол-во часов работы: ");
-    scanf("%d", &a);
-
-    result = 38*x + (a-38)*(x*1.5);
-
-    printf("Ответ: %d\n", result);
+    int result = (candy * X) + (apples * Z) + (cookies * Y);
+    printf("Общая цена: %d", result);
 
     return 0;
+
 }
