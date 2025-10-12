@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-#define Mor_mile 1.852 // meters
-#define Suh_mile 1.609 // km
-#define Rome_mile 1475 // meters
-#define OgR_mile 7.468 // km
-#define Geo_mile 7412.6 // km
+#define Mor_mile 1.852 / 1000
+#define Suh_mile 1.609
+#define Rome_mile 1475 / 1000
+#define OgR_mile 7.468
+#define Geo_mile 7412.6
 
 int choosing_number() 
 
@@ -31,22 +31,8 @@ int main()
     printf("Введите кол-во миль: ");
     scanf("%d", &mile);
 
-    choosing_mile = 0;
 
-    while ( choosing_mile != 1 && choosing_mile != 2 && choosing_mile != 3 && choosing_mile != 4 && choosing_mile != 5 )
-    {
-
-        choosing_mile = choosing_number();
-
-        if (choosing_mile == 1) {result = Mor_mile*mile; k = ' ';}
-        else if (choosing_mile == 2) {result = Suh_mile*mile; k = 'k';}
-        else if (choosing_mile == 3) {result = Rome_mile*mile; k = ' ';}
-        else if (choosing_mile == 4) {result = OgR_mile*mile; k = 'k';}
-        else if (choosing_mile == 5) {result = Geo_mile*mile; k = 'k';}
-
-    }
-
-    printf("Ответ: %.2f %cm \n", result, k);
+    printf("/%.2f морская /\n/ %.2f сухопутная /\n/ %.2f римская /\n/ %.2f старорусская /\n/ %.2f географическая /\n", Mor_mile*mile, Suh_mile*mile, Rome_mile*mile, OgR_mile*mile, Geo_mile*mile);
     return 0;
 
 }
