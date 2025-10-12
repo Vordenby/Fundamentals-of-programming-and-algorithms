@@ -4,7 +4,7 @@
 int main(void){
     int m, n;
 
-    setlocale(LC_ALL, "Rus");
+    setlocale(LC_ALL, ".UTF-8");
 
     scanf("%d %d", &m, &n);
 
