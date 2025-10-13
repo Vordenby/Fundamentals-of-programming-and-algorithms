@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-void choose(float x){
+int choose(float x){
     if ( x >= 100 ) {
-        printf("Вода в газообразном состоянии (пар).\n");
+        return 1;
     }
     else if ( x <= 0 ) {
-        printf("Вода в твёрдом состоянии (лёд).");
+            return 2;
     }
     else {
-        printf("Вода в жидком состоянии.");
+        return 0;
     }
 }
 
@@ -17,7 +17,22 @@ int main(){
     float x;
     printf("Введите температуру воды: "); scanf("%f", &x);
 
-    choose(x);
+    int choosed = choose(x);
+
+    switch (choosed)
+    {
+    case 1:
+    printf("Вода в газообразном состоянии (пар).\n");
+    break;
+
+    case 2:
+    printf("Вода в твёрдом состоянии (лёд).");
+    break;
+    
+    default:
+        printf("Вода в жидком состоянии.");
+        break;
+    }
 
     return 0;
 }
