@@ -13,15 +13,18 @@ int main(){
     case '+':
         printf("=%.2f", x+y);
         break;
+        
     case '-':
         printf("=%.2f", x-y);
         break;
+
     case '/':
         printf("=%.2f", x/y);
         break;
     case '*':
         printf("=%.2f", x*y);
         break;
+
     default:
         break;
     }

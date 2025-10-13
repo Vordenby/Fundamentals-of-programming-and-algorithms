@@ -2,8 +2,8 @@
 
 int main() {
     char c;
-    printf("Введите ваш символ: ");
-    scanf("%c", &c);
+    
+    printf("Введите ваш символ: ");scanf("%c", &c);
 
     switch (c)
     {

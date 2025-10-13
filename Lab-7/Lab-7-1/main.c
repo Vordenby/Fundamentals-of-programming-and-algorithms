@@ -2,8 +2,8 @@
 
 int main() {
     char c;
-    printf("Введите символы 'a' or 'b': ");
-    scanf("%c", &c);
+    
+    printf("Введите символы 'a' or 'b': ");scanf("%c", &c);
     
     switch (c)
     {
