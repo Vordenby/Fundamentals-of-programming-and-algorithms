@@ -1,15 +1,20 @@
 #include <stdio.h>
 #include <locale.h>
+#include <math.h>
+
+int fst(double num)
+{
+    
+    }
 
 int main(void)
 {
 
-    int n;
+    long int n;
 
     scanf("%d", &n);
 
-    int first, second, third, fourth, fifth, sixth, seventh, eighth, nineth, tenth, eleventh, twelveth;
+    int result = fst(fabs(n));
 
-    first = 0;
-
+    return 0;
     }
