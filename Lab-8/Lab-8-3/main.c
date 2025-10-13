@@ -31,5 +31,5 @@ int main(void){
     
     printf("%lf\n", result);
 
-
+    return 0;
 }
