@@ -12,7 +12,6 @@ void draw_triangle(char symbol)
 
     int angle, Lo_side;
 
-    printf("%c", symbol);
     printf("Введите острый угол: "); scanf("%d", &angle);
     
     printf("Введите длину прилежащей стороны (см): "); scanf("%d", &Lo_side);
