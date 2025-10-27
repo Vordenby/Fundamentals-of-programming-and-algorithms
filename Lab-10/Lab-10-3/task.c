@@ -1,19 +1,19 @@
 #include <stdio.h>
 #include <locale.h>
+
+#define _USE_MATH_DEFINES
+
 #include <math.h>
 
-
-void draw_triangle() 
+void draw_triangle(char symbol) 
 {
 
     printf("\n\n***********\n* DRAWING *\n***********\n\n");
 
     int angle, Lo_side;
-    char chars;
 
-    printf("Введите символ, которым будет изображена фигура: "); scanf("%c", &chars);
-
-    printf("Введите угол а (радианы): "); scanf("%d", &angle);
+    printf("%c", symbol);
+    printf("Введите острый угол: "); scanf("%d", &angle);
     
     printf("Введите длину прилежащей стороны (см): "); scanf("%d", &Lo_side);
 
@@ -39,7 +39,7 @@ void draw_triangle()
         {
             if (i >= j) 
             {
-                printf("%c ", chars);
+                printf("%c ", symbol);
             } else {
                 printf("  ");
             }
@@ -62,6 +62,8 @@ float area_triangle() {
             return 0;
             }
     
+    angle = angle * M_PI / 180.0;
+
     float result = 0.5 * first_side * second_side * sinf(angle);
     return result;
 
@@ -92,8 +94,10 @@ int main(void)
             define_of_triangle();
             break;
         case 3:
-            draw_triangle();
-
+            char symbol;
+            printf("Введите символ, которым будет изображена фигура: "); scanf(" %c",&symbol);
+            draw_triangle(symbol);
+            break;
         default:
             printf("Введен невозможный вариант.");
             break;
