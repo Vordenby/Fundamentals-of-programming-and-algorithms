@@ -1,13 +1,13 @@
 #include <locale.h>
 #include <stdio.h>
 
-#define N 10
+#define N 4
 
 void ReturnArray(float A[N], int B[N]) {
-    printf("|index|Было|Стало|");
+    printf("|index|Было|Стало|\n");
     for (int i = 0; i < N; i++){
-        printf("|%d|%.1f|%d|", i, A[i], B[i]);
-        }
+        printf("|%5d|%5.1f|%4.d|\n", i, A[i], B[i]);
+    }
 }
 
 int main(){
