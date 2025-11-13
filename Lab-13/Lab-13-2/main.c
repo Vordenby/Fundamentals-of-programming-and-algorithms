@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <ctype.h>
+#include <string.h>
 
 int main(void) {
 
@@ -12,6 +12,15 @@ int main(void) {
     
     scanf("%19s", Name);
 
+    for (int i = 0; i < sizeof(Name); i++) {
+
+        if (Name[i] == 'a') {
+
+            Name[i] = '@';
+
+        }
+
+    }
 
     if (strlen(Snew) + strlen(Name) < sizeof(Snew)) {
         strcat(Snew, Name);
@@ -19,18 +28,9 @@ int main(void) {
         printf("Your name is too big\n");
         return 1;
     }
-    
-    printf("%s!\n", Snew);
 
-    // 1.2
-
-    for (char * ptr = Snew; *ptr; ptr++) {
-
-        *ptr = toupper(*ptr);
-
-    }
-
-    printf("%s!\n", Snew);
+    printf("%s!", Snew);
 
     return 0;
+
 }
