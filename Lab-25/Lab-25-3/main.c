@@ -14,7 +14,13 @@ int rand_int() {
 
 int* create_array() {
 
+    int array[N]
 
+    for (int i = 0; i < N; i++) {
+
+        array[i] = rand_int();
+
+    }
 
 }
 
