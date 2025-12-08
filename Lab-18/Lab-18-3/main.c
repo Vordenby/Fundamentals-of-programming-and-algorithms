@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <locale.h>
+#include <math.h>
+
+#define _USE_MATH_DEFINES
 
 typedef enum {
     MALE,

@@ -2,21 +2,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void full_elements(double* ptr_array, int n) {
+double* full_elements(double* ptr_array, int n) {
     for (int i = 0; i < n; i++) {
 
         *(ptr_array+i) = i* 200.0 / 45.0;
 
     }
+
+    return ptr_array;
 }
 
-void calc_elements(double* ptr_array, int n) {
+double* calc_elements(double* ptr_array, int n) {
 
     for (int i = 0; i < n; i++) {
 
         *(ptr_array + i) = (double)((int)*(ptr_array+i));
 
     }
+
+    return ptr_array;
 
 }
 
@@ -27,7 +31,6 @@ void put_elements(double* ptr_array, int n) {
         printf("array[%d] = %.2f\n", i+1, *(ptr_array + i));
 
     }
-
 }
 
 int main() {

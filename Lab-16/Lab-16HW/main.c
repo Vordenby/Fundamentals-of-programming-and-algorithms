@@ -6,10 +6,12 @@ double RandDouble() {
     return (double)rand() / RAND_MAX;
 }
 
-void NArray(double *arr, int size) {
+double* NArray(double *arr, int size) {
     for (int i = 0; i < size; i++) {
         arr[i] = random_double();
     }
+
+    return arr;
 }
 
 double Find_Min(double arr[], int size) {
